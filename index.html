@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn tập Giữa kì I – Tiếng Anh 7 | Luyện đề tương tác</title>
+<meta name="description" content="Ứng dụng ôn tập tương tác môn Tiếng Anh lớp 7: phát âm, ngữ pháp & từ vựng, đọc hiểu, viết – kèm bản dịch, giải thích chi tiết và mẹo làm bài.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF7EE; --card:#FFFFFF; --ink:#2D3142; --ink-soft:#5C6273;
+  --primary:#FF7043; --primary-dark:#F4511E; --teal:#00ACC1; --teal-soft:#E0F7FA;
+  --sun:#FFC107; --green:#43A047; --green-soft:#E8F5E9; --red:#E53935; --red-soft:#FDECEA;
+  --violet:#7E57C2; --violet-soft:#EDE7F6; --blue:#1E88E5; --blue-soft:#E3F2FD;
+  --border:#F0E4D7; --shadow:0 6px 20px rgba(45,49,66,.08);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.baloo{font-family:'Baloo 2',cursive}
+img{max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+
+/* ===== HEADER ===== */
+.hero{background:linear-gradient(135deg,#FF7043 0%,#FFA726 55%,#FFCA28 100%);color:#fff;padding:34px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:34px;background:var(--bg);border-radius:34px 34px 0 0}
+.hero::before{content:"✏️ 📚 🎧 📖 ✨";position:absolute;font-size:26px;letter-spacing:18px;opacity:.35;top:10px;left:0;right:0;text-align:center}
+.hero .wrap{position:relative;text-align:center}
+.hero .badge{display:inline-block;background:rgba(255,255,255,.22);padding:5px 16px;border-radius:999px;font-weight:800;font-size:.85rem;letter-spacing:.5px;margin-bottom:10px}
+.hero h1{font-size:clamp(1.5rem,4.5vw,2.3rem);font-weight:800;text-shadow:0 2px 8px rgba(0,0,0,.15)}
+.hero p{margin-top:6px;font-weight:600;opacity:.95;font-size:.98rem}
+.hero .stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.stat{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);border-radius:14px;padding:8px 18px;font-weight:800;font-size:.9rem}
+.stat b{font-size:1.15rem}
+
+/* ===== STICKY BAR ===== */
+.progress-wrap{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 12px rgba(45,49,66,.1);padding:8px 0}
+.progress-row{display:flex;align-items:center;gap:12px}
+.progress-row .label{font-weight:800;font-size:.85rem;white-space:nowrap;color:var(--ink-soft)}
+.bar{flex:1;height:10px;background:var(--border);border-radius:99px;overflow:hidden}
+.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:99px;transition:width .4s ease}
+.score-chip{background:var(--teal-soft);color:var(--teal);font-weight:800;border-radius:99px;padding:4px 12px;font-size:.85rem;white-space:nowrap}
+
+/* ===== CONTROLS ===== */
+.toolbar{margin:16px auto 0;position:relative;z-index:5}
+.panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.mode-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
+.mode-btn{border:2px solid var(--border);border-radius:999px;padding:8px 20px;font-weight:800;font-size:.9rem;color:var(--ink-soft);background:#fff;transition:.2s}
+.mode-btn.on{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 4px 12px rgba(255,112,67,.35)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.chip{border:2px solid var(--border);border-radius:999px;padding:6px 16px;font-weight:800;font-size:.85rem;color:var(--ink-soft);background:#fff;transition:.2s}
+.chip.on{border-color:var(--teal);color:var(--teal);background:var(--teal-soft)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:10px 22px;font-weight:800;font-size:.95rem;transition:.2s;justify-content:center}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(255,112,67,.35)}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-ghost{background:#fff;border:2px solid var(--border);color:var(--ink-soft)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-sm{padding:7px 14px;font-size:.85rem;border-radius:10px}
+
+/* ===== TEACHER PANEL ===== */
+details.teacher{margin-top:14px}
+details.teacher summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:800;color:var(--violet);padding:10px 4px}
+details.teacher summary::-webkit-details-marker{display:none}
+details.teacher summary::before{content:"🎓";font-size:1.2rem}
+details.teacher summary::after{content:"▾";margin-left:auto;transition:.2s}
+details.teacher[open] summary::after{transform:rotate(180deg)}
+.teacher-box{background:var(--violet-soft);border-radius:var(--radius);padding:16px;margin-top:8px}
+.teacher-box h3{font-size:1rem;margin-bottom:8px}
+.teacher-box .hint{font-size:.85rem;color:var(--ink-soft);margin-bottom:10px}
+.uprow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.file-label{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px dashed var(--violet);color:var(--violet);border-radius:12px;padding:9px 16px;font-weight:800;font-size:.88rem;cursor:pointer}
+.file-label:hover{background:var(--violet);color:#fff}
+textarea#pasteBox{width:100%;min-height:110px;border:2px solid var(--border);border-radius:12px;padding:10px;font-family:monospace;font-size:.82rem;resize:vertical;background:#fff}
+textarea#pasteBox:focus{outline:none;border-color:var(--violet)}
+.fmt{background:#fff;border-radius:10px;padding:10px 12px;font-family:monospace;font-size:.78rem;white-space:pre;overflow-x:auto;margin-top:10px;color:var(--ink-soft);border:1px solid var(--border)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:11px 22px;border-radius:999px;font-weight:700;font-size:.9rem;opacity:0;transition:.35s;z-index:99;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.err{background:var(--red)}
+
+/* ===== SECTIONS & QUESTIONS ===== */
+main{padding:24px 0 80px}
+.section-head{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+.section-head .ico{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.section-head h2{font-size:1.35rem;font-weight:800}
+.section-head .cnt{margin-left:auto;font-weight:800;font-size:.82rem;color:var(--ink-soft);background:#fff;border:1.5px solid var(--border);padding:4px 12px;border-radius:99px;white-space:nowrap}
+.passage{background:var(--blue-soft);border-left:5px solid var(--blue);border-radius:12px;padding:14px 16px;margin:14px 0;font-size:.93rem;color:#263238}
+.passage b{color:var(--blue)}
+.part-label{font-weight:800;color:var(--ink-soft);font-size:.85rem;margin:16px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+
+.q-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 18px 14px;margin-bottom:16px;border:2px solid transparent;transition:border .25s}
+.q-card.correct{border-color:var(--green)}
+.q-card.wrong{border-color:var(--red)}
+.q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.q-num{background:var(--sun);color:#5D4037;font-weight:800;border-radius:10px;padding:3px 11px;font-size:.85rem;flex-shrink:0;font-family:'Baloo 2',cursive}
+.q-badge{font-weight:800;font-size:.72rem;border-radius:99px;padding:3px 11px;flex-shrink:0;letter-spacing:.3px}
+.q-text{font-weight:700;font-size:1rem;flex:1;min-width:0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:10px;border:2px solid var(--border);border-radius:12px;padding:10px 14px;font-weight:700;font-size:.95rem;text-align:left;transition:.18s;background:#fff;color:var(--ink)}
+.opt .k{width:28px;height:28px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;font-family:'Baloo 2',cursive}
+.opt:hover:not(:disabled){border-color:var(--teal);transform:translateY(-1px)}
+.opt.picked{border-color:var(--teal);background:var(--teal-soft)}
+.opt.right{border-color:var(--green);background:var(--green-soft)}
+.opt.right .k{background:var(--green);color:#fff}
+.opt.wrongpick{border-color:var(--red);background:var(--red-soft)}
+.opt.wrongpick .k{background:var(--red);color:#fff}
+.opt:disabled{cursor:default;opacity:.92}
+.q-actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.fb{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.fb.open{max-height:1400px}
+.fb-inner{margin-top:14px;border-radius:14px;padding:14px 16px;background:var(--teal-soft)}
+.fb-banner{font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:.95rem}
+.fb-banner.ok{color:var(--green)} .fb-banner.no{color:var(--red)}
+.fb-row{display:flex;gap:8px;margin-top:8px;font-size:.9rem}
+.fb-row .tag{flex-shrink:0;font-weight:800;font-size:.72rem;border-radius:8px;padding:3px 10px;height:fit-content;margin-top:2px}
+.tag-cat{background:var(--sun);color:#5D4037}
+.tag-tr{background:var(--blue-soft);color:var(--blue)}
+.tag-ex{background:var(--green-soft);color:var(--green)}
+.tag-tip{background:var(--violet-soft);color:var(--violet)}
+.fb-row p{color:#37474F}
+.fb-row p b{color:var(--ink)}
+.open-area{margin-top:12px}
+.open-area textarea{width:100%;min-height:90px;border:2px solid var(--border);border-radius:12px;padding:10px;font-family:inherit;font-size:.92rem;resize:vertical}
+.open-area textarea:focus{outline:none;border-color:var(--teal)}
+.sample{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.sample.open{max-height:900px}
+.sample-inner{margin-top:10px;background:var(--green-soft);border-radius:12px;padding:12px 14px;font-size:.92rem}
+.sample-inner .tag-tr{margin-bottom:6px;display:inline-block}
+
+/* ===== RESULT MODAL ===== */
+.modal-bg{position:fixed;inset:0;background:rgba(45,49,66,.55);display:none;align-items:center;justify-content:center;z-index:90;padding:16px}
+.modal-bg.show{display:flex}
+.modal{background:#fff;border-radius:24px;max-width:520px;width:100%;padding:26px;text-align:center;max-height:88vh;overflow:auto}
+.modal .big{font-size:3.4rem;line-height:1}
+.modal h2{margin:8px 0 4px;font-size:1.5rem}
+.modal .sub{color:var(--ink-soft);font-weight:700}
+.sec-scores{margin:16px 0;text-align:left}
+.sec-score{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px dashed var(--border);font-weight:700;font-size:.92rem}
+.sec-score .mini-bar{flex:1;height:8px;background:var(--border);border-radius:99px;overflow:hidden}
+.sec-score .mini-bar>i{display:block;height:100%;background:var(--teal);border-radius:99px}
+.sec-score b{min-width:52px;text-align:right;color:var(--teal)}
+.modal .actions{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+footer{text-align:center;padding:20px;color:var(--ink-soft);font-size:.85rem;font-weight:600}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">📚 NĂM HỌC 2026 – 2027</span>
+    <h1>Ôn tập Giữa kì I – Tiếng Anh 7</h1>
+    <p>Trường THCS Kinh Môn · Luyện đề tương tác – có dịch nghĩa, giải thích &amp; mẹo làm bài</p>
+    <div class="stats">
+      <span class="stat">📝 <b id="statTotal">0</b> câu hỏi</span>
+      <span class="stat">🗂️ <b id="statSections">0</b> phần thi</span>
+      <span class="stat">⏱️ Học mọi lúc</span>
+    </div>
+  </div>
+</header>
+
+<div class="progress-wrap">
+  <div class="wrap progress-row">
+    <span class="label">Tiến độ</span>
+    <div class="bar"><i id="bar"></i></div>
+    <span class="score-chip" id="scoreChip">0/0 câu đúng</span>
+  </div>
+</div>
+
+<div class="wrap toolbar">
+  <div class="panel">
+    <div class="mode-row">
+      <button class="mode-btn on" id="modeAuto" onclick="setMode('auto')">⚡ Chấm ngay khi chọn</button>
+      <button class="mode-btn" id="modeManual" onclick="setMode('manual')">🧐 Tự kiểm tra sau</button>
+      <button class="btn btn-ghost btn-sm" onclick="resetAll()">🔄 Làm lại từ đầu</button>
+    </div>
+    <div class="chips" id="sectionChips"></div>
+  </div>
+
+  <details class="teacher">
+    <summary>Khu vực dành cho giáo viên – tải lên bộ đề của riêng bạn</summary>
+    <div class="teacher-box">
+      <h3>Tải lên file đề (JSON hoặc TXT)</h3>
+      <div class="hint">Chọn file từ máy tính, hoặc dán trực tiếp nội dung vào ô bên dưới rồi bấm "Nạp dữ liệu".</div>
+      <div class="uprow">
+        <label class="file-label">📎 Chọn file…<input type="file" id="fileInput" accept=".json,.txt" class="hidden"></label>
+        <button class="btn btn-teal btn-sm" onclick="loadPasted()">📥 Nạp dữ liệu từ ô dán</button>
+        <button class="btn btn-ghost btn-sm" onclick="loadDefault()">↩️ Dùng lại đề mẫu</button>
+      </div>
+      <textarea id="pasteBox" placeholder='Dán JSON hoặc dữ liệu TXT theo định dạng bên dưới…'></textarea>
+      <div class="fmt">Định dạng TXT gợi ý:
+# Phát âm
+Câu 1: Nội dung câu hỏi…
+A. lựa chọn A
+B. lựa chọn B
+C. lựa chọn C
+D. lựa chọn D
+Đáp án: C
+Dịch: Bản dịch câu hỏi và đáp án…
+Giải thích: Vì sao chọn đáp án đó…
+Mẹo: Dấu hiệu nhận biết, mẹo nhớ…
+---
+# Đọc hiểu
+[Đoạn văn: dán đoạn văn đọc ở đây]
+Câu 1: …</div>
+      <div class="fmt">Định dạng JSON: {"sections":[{"name":"Phát âm","questions":[{"question":"...","options":["A","B","C","D"],"answer":"C","translate":"...","explain":"...","tip":"...","passage":"(tùy chọn)","sample":"(câu tự luận)"}]}]}</div>
+    </div>
+  </details>
+</div>
+
+<main class="wrap" id="quizArea"></main>
+
+<div class="wrap" style="text-align:center;padding-bottom:60px">
+  <button class="btn btn-primary" style="font-size:1.05rem;padding:13px 34px" onclick="openResult()">🏁 Nộp bài – Xem kết quả</button>
+</div>
+
+<footer>Làm bài tốt nhé! 💪 – Ứng dụng ôn tập Tiếng Anh lớp 7 · Năm học 2026–2027</footer>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-bg" id="resultModal">
+  <div class="modal">
+    <div class="big" id="resEmoji">🏆</div>
+    <h2 id="resTitle">Kết quả của bạn</h2>
+    <p class="sub" id="resSub"></p>
+    <div class="sec-scores" id="secScores"></div>
+    <div class="actions">
+      <button class="btn btn-primary" onclick="resetAll()">🔄 Làm lại</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('resultModal').classList.remove('show')">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================== BỘ ĐỀ MẪU (lấy từ ĐỀ CƯƠNG ÔN TẬP GIỮA KÌ I – L7) ================== */
+const DEFAULT_DATA = {
+  title: "ĐỀ CƯƠNG ÔN TẬP GIỮA KÌ I – NĂM HỌC 2026–2027 · MÔN TIẾNG ANH LỚP 7",
+  school: "Trường THCS Kinh Môn",
+  sections: [
+  { name: "Phát âm", icon: "🔊", color: "var(--teal)", bg: "var(--teal-soft)", questions: [
+    { n: "Câu 1", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["avoid", "amazing", "learn", "collect"], ans: 2, cat: "Phát âm",
+      tr: "avoid (tránh) / amazing (tuyệt vời) / learn (học) / collect (sưu tầm).", 
+      ex: "Chữ “a” trong avoid, amazing và “o” trong collect đều đọc là /ə/ (âm schwa, nhẹ và ngắn). Riêng “ea” trong learn đọc là /ɜː/ — âm dài, môi hơi tròn, lưỡi ở giữa.",
+      tip: "Ghi nhớ: “ea” thường đọc /iː/ (read, eat) nhưng với learn, early, earth thì đọc /ɜː/." },
+    { n: "Câu 2", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["watched", "played", "cooked", "helped"], ans: 1, cat: "Phát âm",
+      tr: "watched (đã xem) / played (đã chơi) / cooked (đã nấu) / helped (đã giúp).",
+      ex: "Đuôi “-ed”: đọc /t/ sau âm vô thanh (watched, cooked, helped), đọc /d/ sau âm hữu thanh. “Played” kết thúc bằng âm hữu thanh /eɪ/ nên “-ed” đọc là /d/.",
+      tip: "Mẹo “-ed”: đặt tay lên cổ họng — rung (hữu thanh) → /d/; không rung → /t/." },
+    { n: "Câu 3", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["orphanage", "patient", "agree", "about"], ans: 1, cat: "Phát âm",
+      tr: "orphanage (trại trẻ mồ côi) / patient (kiên nhẫn) / agree (đồng ý) / about (về).",
+      ex: "“a” trong orphanage, agree, about đều đọc là /ə/. Riêng “a” trong patient đọc là /eɪ/ (như trong ngày “day”).",
+      tip: "Âm /eɪ/ hay gặp ở: patient, native, nature. Còn “a” không nhấn thường đọc /ə/." },
+    { n: "Câu 4", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["walked", "opened", "stopped", "watched"], ans: 1, cat: "Phát âm",
+      tr: "walked (đã đi bộ) / opened (đã mở) / stopped (đã dừng) / watched (đã xem).",
+      ex: "walked, stopped, watched có âm kết thúc vô thanh nên “-ed” đọc /t/. “Opened” kết thúc bằng /n/ (âm hữu thanh) nên “-ed” đọc /d/.",
+      tip: "/t/ sau: p, k, f, s, x, ch, sh · /d/ sau các âm còn lại · /ɪd/ sau t, d (wanted, needed)." },
+    { n: "Câu 5", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["bird", "girl", "first", "sister"], ans: 3, cat: "Phát âm",
+      tr: "bird (con chim) / girl (cô gái) / first (đầu tiên) / sister (chị/em gái).",
+      ex: "“ir” trong bird, girl và “fir” trong first đều đọc /ɜː/. Riêng “i” trong sister đọc là /ɪ/ (âm ngắn) vì âm đó không nhấn.",
+      tip: "“ir”, “ur”, “er” khi có nhấn thường đọc /ɜː/: bird, turn, her." },
+    { n: "Câu 6", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["volleyball", "laugh", "favour", "photo"], ans: 0, cat: "Phát âm",
+      tr: "volleyball (môn bóng chuyền) / laugh (cười) / favour (ân huệ) / photo (bức ảnh).",
+      ex: "“f” trong laugh (phát /f/), “f” trong favour và “ph” trong photo đều đọc /f/. Riêng “v” trong volleyball đọc là /v/ — răng cắn nhẹ vào môi dưới và rung.",
+      tip: "So sánh: /f/ không rung (laugh, photo), /v/ có rung (volleyball, love)." },
+    { n: "Câu 7", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["dear", "near", "learn", "clear"], ans: 2, cat: "Phát âm",
+      tr: "dear (thân mến) / near (gần) / learn (học) / clear (rõ ràng).",
+      ex: "“ea” trong dear, near, clear đọc là /ɪə/ (ký âm đôi). Riêng “ea” trong learn đọc là /ɜː/.",
+      tip: "“ear” thường đọc /ɪə/ (hear, year, near) — trừ learn, early, heart." },
+    { n: "Câu 8", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["decided", "worked", "watched", "brushed"], ans: 0, cat: "Phát âm",
+      tr: "decided (đã quyết định) / worked (đã làm việc) / watched (đã xem) / brushed (đã chải).",
+      ex: "decided có gốc kết thúc bằng âm /d/ (decide) nên “-ed” đọc /ɪd/ — thành âm tiết riêng. Các từ còn lại đọc /t/.",
+      tip: "Chỉ đọc /ɪd/ khi động từ gốc kết thúc bằng t hoặc d: want→wanted, need→needed, decide→decided." },
+    { n: "Câu 9", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["time", "boring", "film", "favourite"], ans: 0, cat: "Phát âm",
+      tr: "time (thời gian) / boring (nhàm chán) / film (bộ phim) / favourite (yêu thích).",
+      ex: "“i” trong time đọc là /aɪ/ (khi i + phụ âm + e im: time, like, fine). “i” trong boring, film, favourite đọc /ɪ/ hoặc /ə/.",
+      tip: "Quy tắc “i_e”: i + phụ âm + e → /aɪ/ (time, nine, ride)." },
+    { n: "Câu 10", q: "Chọn từ có phần gạch chân phát âm khác với các từ còn lại.", opts: ["parade", "patient", "game", "careful"], ans: 0, cat: "Phát âm",
+      tr: "parade (đoàn diễu hành) / patient (kiên nhẫn) / game (trò chơi) / careful (cẩn thận).",
+      ex: "“a” trong parade đọc /ə/ vì âm đó không được nhấn. “a” trong patient, game đọc /eɪ/, “a” trong careful đọc /eə/.",
+      tip: "Từ có 2 âm tiết trở lên: tìm âm tiết được nhấn — âm tiết không nhấn thường đọc /ə/." }
+  ]},
+  { name: "Ngữ pháp & Từ vựng", icon: "📖", color: "var(--primary)", bg: "#FFE9E0", questions: [
+    { n: "Câu 1", q: "All of them enjoy ________ to rock music.", opts: ["to listen", "to listening", "listen", "listening"], ans: 3, cat: "Ngữ pháp",
+      tr: "Tất cả họ đều thích nghe nhạc rock.", opts_tr: ["để nghe", "để đang nghe", "nghe", "nghe (dạng V-ing)"],
+      ex: "Động từ “enjoy” luôn đi với danh động từ (V-ing): enjoy + V-ing. Không dùng enjoy to V.",
+      tip: "Nhóm động từ luôn + V-ing: enjoy, love, like, hate, finish, avoid, mind, suggest." },
+    { n: "Câu 2", q: "My cooking lesson ________ at 9 a.m every Sunday.", opts: ["start", "starts", "started", "starting"], ans: 1, cat: "Ngữ pháp",
+      tr: "Buổi học nấu ăn của tôi bắt đầu lúc 9 giờ sáng Chủ nhật hằng tuần.",
+      ex: "“Every Sunday” là dấu hiệu thì hiện tại đơn (thói quen). Chủ ngữ “My cooking lesson” là số ít → thêm “-s”: starts.",
+      tip: "every day/week/Sunday → hiện tại đơn. Chủ ngữ he/she/it hoặc số ít → động từ + s/es." },
+    { n: "Câu 3", q: 'Lan: "Mi read, danced and sang for the elderly in the nursing home."\nBa: "________"', opts: ["Fantastic!", "Awesome!", "Sound like great work", "All A, B and C are correct"], ans: 3, cat: "Giao tiếp",
+      tr: "Lan: “Mi đã đọc, múa và hát cho các cụ già ở viện dưỡng lão.” — Ba: “________”",
+      opts_tr: ["Tuyệt vời!", "Tuyệt cú mèo!", "Nghe như một việc làm ý nghĩa", "Tất cả A, B và C đều đúng"],
+      ex: "Cả ba câu đều là phản hồi khen ngợi phù hợp khi nghe kể về việc làm tốt, nên chọn D.",
+      tip: "Trong bài giao tiếp, nếu các phương án đều lịch sự và hợp tình huống thì cân nhắc đáp án “all are correct”." },
+    { n: "Câu 4", q: "You should wear a hat and put on suncream to avoid ________.", opts: ["skin", "fitness", "activity", "sunburn"], ans: 3, cat: "Từ vựng",
+      tr: "Bạn nên đội mũ và thoa kem chống nắng để tránh bị cháy nắng.",
+      opts_tr: ["da", "sức khỏe thể chất", "hoạt động", "cháy nắng"],
+      ex: "“avoid + V-ing/danh từ” = tránh điều gì xấu. Đội mũ, thoa kem chống nắng → tránh cháy nắng (sunburn).",
+      tip: "Đọc cả câu để tìm mối liên hệ nhân – quả: nắng + mũ + kem chống nắng → sunburn." },
+    { n: "Câu 5", q: "We often help ________ in my town to clean up the houses and cook meals.", opts: ["rich people", "businessman", "elderly people", "homeless people"], ans: 2, cat: "Từ vựng",
+      tr: "Chúng tôi thường giúp các cụ già trong thị trấn dọn dẹp nhà cửa và nấu cơm.",
+      opts_tr: ["người giàu", "doanh nhân", "người lớn tuổi", "người vô gia cư"],
+      ex: "Hoạt động “clean up the houses and cook meals” (dọn nhà, nấu ăn giúp) là việc giúp người già yếu (elderly people) — đối tượng điển hình của công việc cộng đồng.",
+      tip: "Chủ đề community service thường gặp: the elderly, homeless children, the needy, poor children." },
+    { n: "Câu 6", q: "My sister usually ________ reading comic books in her free time.", opts: ["enjoy", "enjoys", "enjoyed", "enjoying"], ans: 1, cat: "Ngữ pháp",
+      tr: "Chị tôi thường thích đọc truyện tranh vào thời gian rảnh.",
+      ex: "“usually” → hiện tại đơn; chủ ngữ “My sister” (she) → động từ thêm “-s”: enjoys.",
+      tip: "usually / always / often / sometimes / never → hiện tại đơn. He/She/It → V-s/es." },
+    { n: "Câu 7", q: "Yesterday, Nam ________ a healthy breakfast before going to school.", opts: ["has", "have", "had", "having"], ans: 2, cat: "Ngữ pháp",
+      tr: "Hôm qua, Nam đã ăn sáng đầy đủ dinh dưỡng trước khi đi học.",
+      ex: "“Yesterday” là dấu hiệu thì quá khứ đơn → “have” chia quá khứ là “had”.",
+      tip: "Dấu hiệu quá khứ đơn: yesterday, last week/year/night, ago, in 2020…" },
+    { n: "Câu 8", q: "Eating more fruit and vegetables is very ________ for our health.", opts: ["health", "healthy", "healthily", "healthier"], ans: 1, cat: "Từ vựng",
+      tr: "Ăn nhiều trái cây và rau quả rất tốt cho sức khỏe của chúng ta.",
+      opts_tr: ["sức khỏe (danh từ)", "tốt cho sức khỏe (tính từ)", "một cách lành mạnh (trạng từ)", "lành mạnh hơn (so sánh hơn)"],
+      ex: "Sau “is very” cần một tính từ → “healthy”. Cấu trúc: be + adj + for + N (tốt cho…).",
+      tip: "Nhận diện từ loại: health (n) – healthy (adj) – healthily (adv) – healthier (so sánh hơn)." },
+    { n: "Câu 9", q: "Students often take part ________ community service to help the elderly.", opts: ["in", "on", "at", "with"], ans: 0, cat: "Ngữ pháp",
+      tr: "Học sinh thường tham gia công việc cộng đồng để giúp người lớn tuổi.",
+      ex: "Cụm cố định: take part IN + hoạt động = tham gia vào.",
+      tip: "Học cụm nguyên khối: take part in = join in = participate in (tham gia)." },
+    { n: "Câu 10", q: "My brother likes ________ chess after dinner.", opts: ["playing", "to play", "plays", "played"], ans: 0, cat: "Ngữ pháp",
+      tr: "Anh trai tôi thích chơi cờ sau bữa tối.",
+      ex: "“like + V-ing” diễn tả sở thích, thói quen yêu thích → likes playing.",
+      tip: "like/love/enjoy/hate + V-ing khi nói về sở thích nói chung." },
+    { n: "Câu 11", q: "Lan usually ________ old clothes to poor children in the village.", opts: ["gets", "donates", "takes", "wears"], ans: 1, cat: "Từ vựng",
+      tr: "Lan thường quyên góp quần áo cũ cho trẻ em nghèo ở làng.",
+      opts_tr: ["nhận", "quyên góp", "mang đi", "mặc"],
+      ex: "Cấu trúc “donate + đồ vật + to + người” = quyên góp cái gì cho ai. Chỉ “donates” vừa hợp nghĩa vừa chia đúng hiện tại đơn với chủ ngữ số ít.",
+      tip: "Từ vựng quyên góp: donate (quyên góp), raise money (gây quỹ), volunteer (tình nguyện viên)." },
+    { n: "Câu 12", q: "If you don't want to get sunburn, you should wear a hat and ________.", opts: ["T-shirt", "shoes", "dress", "suncream"], ans: 3, cat: "Từ vựng",
+      tr: "Nếu bạn không muốn bị cháy nắng, bạn nên đội mũ và thoa kem chống nắng.",
+      opts_tr: ["áo phông", "giày", "váy", "kem chống nắng"],
+      ex: "Nguyên nhân “get sunburn” (bị cháy nắng) chỉ phòng được bằng kem chống nắng (suncream), giống như câu 4 phần này.",
+      tip: "Chủ đề sức khỏe: sunburn (cháy nắng) → suncream/hat; flu (cúm) → rest, medicine." },
+    { n: "Câu 13", q: "Some hobbies can help students learn to be ________ with their work.", opts: ["popular", "patient", "valuable", "tired"], ans: 1, cat: "Từ vựng",
+      tr: "Một số sở thích có thể giúp học sinh học cách kiên nhẫn với công việc của mình.",
+      opts_tr: ["nổi tiếng", "kiên nhẫn", "có giá trị", "mệt mỏi"],
+      ex: "Cụm cố định: “be patient with + công việc/người” = kiên nhẫn với… Sở thích rèn tính kiên nhẫn.",
+      tip: "Tính từ đi với giới từ: patient with, good at, interested in, afraid of." },
+    { n: "Câu 14", q: "They often collect old clothes to ________ poor children.", opts: ["donate", "save", "sell", "borrow"], ans: 0, cat: "Từ vựng",
+      tr: "Họ thường thu gom quần áo cũ để quyên góp cho trẻ em nghèo.",
+      opts_tr: ["quyên góp", "tiết kiệm/cứu", "bán", "mượn"],
+      ex: "Thu gom quần áo cũ để cho đi miễn phí = donate. “Sell” (bán) và “borrow” (mượn) trái nghĩa với mục đích từ thiện.",
+      tip: "“to + V nguyên mẫu” chỉ mục đích: thu gom… ĐỂ quyên góp → donate." },
+    { n: "Câu 15", q: "You should eat more fruit and vegetables to stay ________.", opts: ["hungry", "healthy", "tired", "sick"], ans: 1, cat: "Từ vựng",
+      tr: "Bạn nên ăn nhiều trái cây và rau quả để giữ sức khỏe.",
+      opts_tr: ["đói", "khỏe mạnh", "mệt", "ốm"],
+      ex: "Cụm “stay healthy” = giữ gìn sức khỏe. Trái cây, rau quả → khỏe mạnh, không phải hungry/tired/sick.",
+      tip: "“stay/keep + adj” = giữ trạng thái đó: stay healthy, keep fit, stay calm." },
+    { n: "Câu 1", q: "Announcement: “Join us ________ Friday, October 15th, at the town hall.”", passage: "We are organizing a support event for people affected by the floods. Many families have lost their homes and need our help. Join us (1) ________ Friday, October 15th, at the town hall. We (2) ________ food, clothes, and other essential items. You can also (3) ________ money to help these families. Every donation counts! Please come and share this message with your friends. Together, we can make a difference. Thank you for your kindness and support!",
+      opts: ["on", "at", "in", "for"], ans: 0, cat: "Ngữ pháp",
+      tr: "Sự kiện quyên góp: “Hãy tham gia cùng chúng tôi VÀO thứ Sáu, ngày 15 tháng 10, tại hội trường thị trấn.”",
+      ex: "Giới từ với ngày/thứ cụ thể: ON + thứ + ngày (on Friday, on Monday morning). “In” dùng cho tháng/năm, “at” dùng cho giờ.",
+      tip: "at + giờ · on + ngày/thứ · in + tháng/năm/buổi (in the morning)." },
+    { n: "Câu 2", q: "Announcement: “We ________ food, clothes, and other essential items.”", passage: "We are organizing a support event for people affected by the floods. Many families have lost their homes and need our help. Join us (1) ________ Friday, October 15th, at the town hall. We (2) ________ food, clothes, and other essential items. You can also (3) ________ money to help these families. Every donation counts! Please come and share this message with your friends. Together, we can make a difference. Thank you for your kindness and support!",
+      opts: ["is collecting", "collect", "collected", "are collecting"], ans: 3, cat: "Ngữ pháp",
+      tr: "“Chúng tôi ĐANG quyên góp thực phẩm, quần áo và các vật dụng thiết yếu khác.”",
+      ex: "Thông báo đang diễn ra thời điểm hiện tại → hiện tại tiếp diễn: are + V-ing. Chủ ngữ “We” → are collecting (không dùng “is”).",
+      tip: "Hiện tại tiếp diễn: am/is/are + V-ing — diễn tả hành động đang xảy ra hoặc kế hoạch gần." },
+    { n: "Câu 3", q: "Announcement: “You can also ________ money to help these families.”", passage: "We are organizing a support event for people affected by the floods. Many families have lost their homes and need our help. Join us (1) ________ Friday, October 15th, at the town hall. We (2) ________ food, clothes, and other essential items. You can also (3) ________ money to help these families. Every donation counts! Please come and share this message with your friends. Together, we can make a difference. Thank you for your kindness and support!",
+      opts: ["make", "shows", "donate", "buy"], ans: 2, cat: "Từ vựng",
+      tr: "“Bạn cũng có thể QUYÊN GÓP tiền để giúp các gia đình này.”",
+      ex: "Cụm “donate money” = quyên góp/đài thọ tiền, hợp với chủ đề từ thiện và câu sau “Every donation counts!”. “Make money” nghĩa là kiếm tiền — không phù hợp.",
+      tip: "Sau “can” luôn dùng động từ nguyên mẫu (donate), không chia “-s” hay “-ing”." },
+    { n: "Câu 4", q: "Photography club: “Do you love taking pictures and want to ________ your creativity?”", passage: "Do you love taking pictures and want to (4) ________ your creativity? Come and join us! We meet every Saturday morning at the school garden. You can learn how to use a camera, edit photos, and even (5) ________ your own photo stories. The club is open to all students who enjoy photography and want to make new friends. Don't wait! (6) ________ us now and capture the beauty around you!",
+      opts: ["share", "listen", "watch", "enjoy"], ans: 0, cat: "Từ vựng",
+      tr: "Câu lạc bộ Nhiếp ảnh Sunshine: “Bạn yêu thích chụp ảnh và muốn THỂ HIỆN sự sáng tạo của mình chứ?”",
+      ex: "“share your creativity” = thể hiện/chia sẻ khả năng sáng tạo — collocation tự nhiên với chủ đề câu lạc bộ nhiếp ảnh.",
+      tip: "share + ideas/creativity/experiences: những thứ mình có và muốn chia sẻ với mọi người." },
+    { n: "Câu 5", q: "Photography club: “…and even ________ your own photo stories.”", passage: "Do you love taking pictures and want to (4) ________ your creativity? Come and join us! We meet every Saturday morning at the school garden. You can learn how to use a camera, edit photos, and even (5) ________ your own photo stories. The club is open to all students who enjoy photography and want to make new friends. Don't wait! (6) ________ us now and capture the beauty around you!",
+      opts: ["write", "draw", "build", "create"], ans: 3, cat: "Từ vựng",
+      tr: "“…và thậm chí SÁNG TẠO những bộ ảnh kể chuyện của riêng bạn.”",
+      ex: "“create your own photo stories” = tạo ra câu chuyện bằng ảnh của chính mình — “photo stories” là sản phẩm sáng tạo, không phải văn bản để “write” hay tranh để “draw”.",
+      tip: "create + sản phẩm mới (stories, videos, designs). create ≠ write (viết chữ/văn)." },
+    { n: "Câu 6", q: "Photography club: “Don't wait! ________ us now and capture the beauty around you!”", passage: "Do you love taking pictures and want to (4) ________ your creativity? Come and join us! We meet every Saturday morning at the school garden. You can learn how to use a camera, edit photos, and even (5) ________ your own photo stories. The club is open to all students who enjoy photography and want to make new friends. Don't wait! (6) ________ us now and capture the beauty around you!",
+      opts: ["Join", "Help", "Visit", "Call"], ans: 0, cat: "Từ vựng",
+      tr: "“Đừng chần chừ! THAM GIA cùng chúng tôi ngay bây giờ và ghi lại vẻ đẹp quanh bạn!”",
+      ex: "Câu mời gia nhập câu lạc bộ: “join us” = tham gia cùng chúng tôi. Đầu câu là lời kêu gọi nên dùng động từ nguyên mẫu “Join”.",
+      tip: "Trong quảng cáo, lời mời thường là “Join us now!” — học cụm này như một nguyên khối." }
+  ]}
+]};
+DEFAULT_DATA.sections.push(
+  { name: "Đọc hiểu", icon: "📚", color: "var(--blue)", bg: "var(--blue-soft)", questions: [
+    { n: "Câu 1", q: "Community service is work that people do to ________ others in their neighborhood or society.", passage: "COMMUNITY SERVICE — Community service is work that people do to (1) ________ others in their neighborhood or society. Many students take part in community projects because they want to make their town a better place to live. Some students help to (2) ________ rubbish in the park, while others visit the elderly and read books to them. Doing community service teaches young people how to work in a (3) ________ and how to care about others. It is not only helpful to the community but also brings (4) ________ to the volunteers themselves. They feel proud and happy when they can make a difference in someone's life. That's why volunteer work is becoming more and more (5) ________ among students today.",
+      opts: ["support", "help", "build", "protect"], ans: 1, cat: "Đọc hiểu – điền từ",
+      tr: "Công việc cộng đồng là công việc mọi người làm ĐỂ GIÚP đỡ những người khác trong khu phố hoặc xã hội.",
+      ex: "“do to ________ others” = làm để giúp người khác → help (giúp đỡ). Support cũng gần nghĩa nhưng “help others” là collocation cơ bản nhất và phù hợp văn phong đơn giản.",
+      tip: "Điền từ: đọc kỹ câu chứa chỗ trống và thử lần lượt từng đáp án, chọn từ tạo thành cụm tự nhiên nhất." },
+    { n: "Câu 2", q: "Some students help to ________ rubbish in the park, while others visit the elderly…", passage: "COMMUNITY SERVICE — Community service is work that people do to (1) ________ others in their neighborhood or society. Many students take part in community projects because they want to make their town a better place to live. Some students help to (2) ________ rubbish in the park, while others visit the elderly and read books to them. Doing community service teaches young people how to work in a (3) ________ and how to care about others. It is not only helpful to the community but also brings (4) ________ to the volunteers themselves. They feel proud and happy when they can make a difference in someone's life. That's why volunteer work is becoming more and more (5) ________ among students today.",
+      opts: ["paint", "cook", "collect", "clean"], ans: 2, cat: "Đọc hiểu – điền từ",
+      tr: "Một số học sinh giúp THU GOM rác trong công viên, trong khi những bạn khác thăm các cụ già…",
+      ex: "Cụm “collect rubbish” = thu gom rác — collocation chuẩn. “Clean rubbish”, “paint rubbish” không có nghĩa.",
+      tip: "Học cụm động từ + danh từ nguyên khối: collect rubbish, clean the park, cook meals." },
+    { n: "Câu 3", q: "Doing community service teaches young people how to work in a ________…", passage: "COMMUNITY SERVICE — Community service is work that people do to (1) ________ others in their neighborhood or society. Many students take part in community projects because they want to make their town a better place to live. Some students help to (2) ________ rubbish in the park, while others visit the elderly and read books to them. Doing community service teaches young people how to work in a (3) ________ and how to care about others. It is not only helpful to the community but also brings (4) ________ to the volunteers themselves. They feel proud and happy when they can make a difference in someone's life. That's why volunteer work is becoming more and more (5) ________ among students today.",
+      opts: ["family", "home", "hospital", "team"], ans: 3, cat: "Đọc hiểu – điền từ",
+      tr: "Làm việc cộng đồng dạy người trẻ cách làm việc THEO NHÓM và cách quan tâm đến người khác.",
+      ex: "“work in a team” = làm việc nhóm — kỹ năng được rèn khi làm việc cộng đồng cùng nhiều người.",
+      tip: "work in a team / teamworking skills: cụm hay gặp trong các bài về hoạt động nhóm." },
+    { n: "Câu 4", q: "It is not only helpful to the community but also brings ________ to the volunteers themselves.", passage: "COMMUNITY SERVICE — Community service is work that people do to (1) ________ others in their neighborhood or society. Many students take part in community projects because they want to make their town a better place to live. Some students help to (2) ________ rubbish in the park, while others visit the elderly and read books to them. Doing community service teaches young people how to work in a (3) ________ and how to care about others. It is not only helpful to the community but also brings (4) ________ to the volunteers themselves. They feel proud and happy when they can make a difference in someone's life. That's why volunteer work is becoming more and more (5) ________ among students today.",
+      opts: ["fun", "tiredness", "stress", "sadness"], ans: 0, cat: "Đọc hiểu – điền từ",
+      tr: "Nó không chỉ có lợi cho cộng đồng mà còn mang lại NIỀM VUI cho chính các tình nguyện viên.",
+      ex: "Câu sau nói “They feel proud and happy” (họ tự hào và vui) → mang lại niềm vui (fun). Tiredness/stress/sadness đều nghĩa tiêu cực.",
+      tip: "Điền từ có “từ khóa nối”: đọc câu kế tiếp để biết hướng nghĩa tích cực hay tiêu cực." },
+    { n: "Câu 5", q: "That's why volunteer work is becoming more and more ________ among students today.", passage: "COMMUNITY SERVICE — Community service is work that people do to (1) ________ others in their neighborhood or society. Many students take part in community projects because they want to make their town a better place to live. Some students help to (2) ________ rubbish in the park, while others visit the elderly and read books to them. Doing community service teaches young people how to work in a (3) ________ and how to care about others. It is not only helpful to the community but also brings (4) ________ to the volunteers themselves. They feel proud and happy when they can make a difference in someone's life. That's why volunteer work is becoming more and more (5) ________ among students today.",
+      opts: ["boring", "noisy", "popular", "expensive"], ans: 2, cat: "Đọc hiểu – điền từ",
+      tr: "Đó là lý do công việc tình nguyện NGÀY CÀNG PHỔ BIẾN trong học sinh hôm nay.",
+      ex: "Cấu trúc “more and more + adj” = ngày càng… Với nghĩa tích cực của bài → popular (phổ biến).",
+      tip: "more and more + tính từ dài = ngày càng…: popular, interesting, important." },
+    { n: "Câu 6", q: 'A Grade 7 student and his friends have an idea of collecting books for homeless children. They call it the "(6) ________ Birthday Party".', passage: "A Grade 7 student and his friends have an idea of collecting books for homeless children in his town. They call it the \"(6) _______ Birthday Party\". Every month they will select a birthday of a friend in his class or a child in his neighbourhood to celebrate (7) _______ special birthday party. It is just a simple party. Everyone who comes to the party should bring some healthy food, drink, and a book (8) _______ any kinds: storybook, textbook, notebook, comic, etc. Those who cannot bring books will help with the collecting and sending books to the homeless children. They believe that the healthy food and drink will help them stay (9) _______ and the books will help homeless children with their study. Everyone will be (10) _______!",
+      opts: ["book", "water", "plant", "clothes"], ans: 0, cat: "Đọc hiểu – điền từ",
+      tr: "Một học sinh lớp 7 và các bạn nêu ý tưởng thu gom sách cho trẻ em vô gia cư. Họ gọi đó là “Bữa tiệc sinh nhật SÁCH”.",
+      ex: "Toàn bài nói về việc thu gom sách (collecting books, bring a book) → tiệc sinh nhật mang tên “Book Birthday Party”.",
+      tip: "Điền từ ở đầu đoạn: đọc toàn bài, từ khóa lặp lại nhiều nhất thường là đáp án." },
+    { n: "Câu 7", q: "Every month they will select a birthday… to celebrate ________ special birthday party.", passage: "A Grade 7 student and his friends have an idea of collecting books for homeless children in his town. They call it the \"(6) _______ Birthday Party\". Every month they will select a birthday of a friend in his class or a child in his neighbourhood to celebrate (7) _______ special birthday party. It is just a simple party. Everyone who comes to the party should bring some healthy food, drink, and a book (8) _______ any kinds: storybook, textbook, notebook, comic, etc. Those who cannot bring books will help with the collecting and sending books to the homeless children. They believe that the healthy food and drink will help them stay (9) _______ and the books will help homeless children with their study. Everyone will be (10) _______!",
+      opts: ["an", "a", "some", "the"], ans: 1, cat: "Đọc hiểu – ngữ pháp",
+      tr: "Hằng tháng họ sẽ chọn sinh nhật của một người bạn… để tổ chức MỘT bữa tiệc sinh nhật đặc biệt.",
+      ex: "Danh từ số ít đếm được, lần đầu nhắc đến → mạo từ “a”. “special” bắt đầu bằng phụ âm /s/ nên dùng a, không dùng an.",
+      tip: "a + phụ âm (a special, a book) · an + nguyên âm (an apple, an hour)." },
+    { n: "Câu 8", q: "…and a book ________ any kinds: storybook, textbook, notebook, comic, etc.", passage: "A Grade 7 student and his friends have an idea of collecting books for homeless children in his town. They call it the \"(6) _______ Birthday Party\". Every month they will select a birthday of a friend in his class or a child in his neighbourhood to celebrate (7) _______ special birthday party. It is just a simple party. Everyone who comes to the party should bring some healthy food, drink, and a book (8) _______ any kinds: storybook, textbook, notebook, comic, etc. Those who cannot bring books will help with the collecting and sending books to the homeless children. They believe that the healthy food and drink will help them stay (9) _______ and the books will help homeless children with their study. Everyone will be (10) _______!",
+      opts: ["in", "about", "for", "of"], ans: 3, cat: "Đọc hiểu – ngữ pháp",
+      tr: "…và một quyển sách BẤT KỂ LOẠI NÀO: truyện, giáo trình, vở, truyện tranh…",
+      ex: "Cụm chuẩn: “of any kinds” = thuộc bất kỳ loại nào. Đây là cách chỉ loại giống/kind đi với giới từ of.",
+      tip: "kinds of / types of + danh từ: many kinds of books, of any kinds." },
+    { n: "Câu 9", q: "They believe that the healthy food and drink will help them stay ________…", passage: "A Grade 7 student and his friends have an idea of collecting books for homeless children in his town. They call it the \"(6) _______ Birthday Party\". Every month they will select a birthday of a friend in his class or a child in his neighbourhood to celebrate (7) _______ special birthday party. It is just a simple party. Everyone who comes to the party should bring some healthy food, drink, and a book (8) _______ any kinds: storybook, textbook, notebook, comic, etc. Those who cannot bring books will help with the collecting and sending books to the homeless children. They believe that the healthy food and drink will help them stay (9) _______ and the books will help homeless children with their study. Everyone will be (10) _______!",
+      opts: ["fat", "healthy", "strong", "unhealthy"], ans: 1, cat: "Đọc hiểu – điền từ",
+      tr: "Họ tin rằng đồ ăn, thức uống lành mạnh sẽ giúp các em GIỮ SỨC KHỎE…",
+      ex: "Đồ ăn healthy → giúp stay healthy (giữ khỏe). “Fat” và “unhealthy” nghĩa tiêu cực, “strong” không liên quan đồ ăn lành mạnh.",
+      tip: "Từ khóa “healthy food” ngay trong câu là manh mối → đáp án cùng họ từ healthy." },
+    { n: "Câu 10", q: "Everyone will be ________!", passage: "A Grade 7 student and his friends have an idea of collecting books for homeless children in his town. They call it the \"(6) _______ Birthday Party\". Every month they will select a birthday of a friend in his class or a child in his neighbourhood to celebrate (7) _______ special birthday party. It is just a simple party. Everyone who comes to the party should bring some healthy food, drink, and a book (8) _______ any kinds: storybook, textbook, notebook, comic, etc. Those who cannot bring books will help with the collecting and sending books to the homeless children. They believe that the healthy food and drink will help them stay (9) _______ and the books will help homeless children with their study. Everyone will be (10) _______!",
+      opts: ["sad", "unhappy", "happy", "bored"], ans: 2, cat: "Đọc hiểu – điền từ",
+      tr: "Tất cả mọi người sẽ đều VUI VẺ!",
+      ex: "Câu kết bài từ thiện mang nghĩa tích cực, có dấu “!” → happy. Sad, unhappy, bored đều nghĩa tiêu cực.",
+      tip: "Câu kết của bài văn thiện nguyện thường là thông điệp tích cực: happy, proud, meaningful." },
+    { n: "Câu 11", q: "The activities include donating books to village children, ________ kids in the neighbourhood…", passage: "My school has a number of volunteer activities every summer. The activities include donating books to village children, (11) _______ kids in the neighbourhood, teaching English to primary students, reading books or cooking food for the needy. Our school stated this programme five years ago. Every student can join one (12) _______ two activities. In the beginning, we thought about why we should join in these activities. We then thought about what activities we wanted (13) _______. Those who like reading could choose to collect and donate books. Those who are good (14)______ English could tutor primary students. Finally, we signed up for the activities we chose. Our teachers often (15) _______ us to stay committed. They also help us when we need it. We have a lot of fun and learn many things from doing the activities.",
+      opts: ["tutored", "tutoring", "to tutor", "tutor"], ans: 1, cat: "Đọc hiểu – ngữ pháp",
+      tr: "Các hoạt động bao gồm quyên góp sách cho trẻ em làng, KÈM CỰ trẻ em trong khu phố…",
+      ex: "Danh sách song song sau “include”: donating…, teaching…, reading… → cần dạng V-ing để liệt kê đồng nhất: tutoring.",
+      tip: "Khi liệt kê nhiều hoạt động trong cùng một câu, các động từ thường cùng dạng (V-ing với include, enjoy)." },
+    { n: "Câu 12", q: "Every student can join one ________ two activities.", passage: "My school has a number of volunteer activities every summer. The activities include donating books to village children, (11) _______ kids in the neighbourhood, teaching English to primary students, reading books or cooking food for the needy. Our school stated this programme five years ago. Every student can join one (12) _______ two activities. In the beginning, we thought about why we should join in these activities. We then thought about what activities we wanted (13) _______. Those who like reading could choose to collect and donate books. Those who are good (14)______ English could tutor primary students. Finally, we signed up for the activities we chose. Our teachers often (15) _______ us to stay committed. They also help us when we need it. We have a lot of fun and learn many things from doing the activities.",
+      opts: ["with", "and", "or", "but"], ans: 2, cat: "Đọc hiểu – ngữ pháp",
+      tr: "Mỗi học sinh có thể tham gia MỘT HOẶC HAI hoạt động.",
+      ex: "“one … or two” = một hoặc hai — chọn một trong hai số lượng. “But” chỉ tương phản, không hợp.",
+      tip: "one … or …: diễn tả lựa chọn số lượng. and = và (cả hai), or = hoặc (chọn một)." },
+    { n: "Câu 13", q: "We then thought about what activities we wanted ________.", passage: "My school has a number of volunteer activities every summer. The activities include donating books to village children, (11) _______ kids in the neighbourhood, teaching English to primary students, reading books or cooking food for the needy. Our school stated this programme five years ago. Every student can join one (12) _______ two activities. In the beginning, we thought about why we should join in these activities. We then thought about what activities we wanted (13) _______. Those who like reading could choose to collect and donate books. Those who are good (14)______ English could tutor primary students. Finally, we signed up for the activities we chose. Our teachers often (15) _______ us to stay committed. They also help us when we need it. We have a lot of fun and learn many things from doing the activities.",
+      opts: ["do", "for doing", "doing", "to do"], ans: 3, cat: "Đọc hiểu – ngữ pháp",
+      tr: "Sau đó chúng tôi suy nghĩ về những hoạt động mà mình MUỐN LÀM.",
+      ex: "“want + to V” (muốn làm gì) → wanted to do. Đây là cấu trúc bất biến của want.",
+      tip: "want + to V · would like + to V · decide + to V — nhóm động từ luôn đi với nguyên mẫu có to." },
+    { n: "Câu 14", q: "Those who are good ________ English could tutor primary students.", passage: "My school has a number of volunteer activities every summer. The activities include donating books to village children, (11) _______ kids in the neighbourhood, teaching English to primary students, reading books or cooking food for the needy. Our school stated this programme five years ago. Every student can join one (12) _______ two activities. In the beginning, we thought about why we should join in these activities. We then thought about what activities we wanted (13) _______. Those who like reading could choose to collect and donate books. Those who are good (14)______ English could tutor primary students. Finally, we signed up for the activities we chose. Our teachers often (15) _______ us to stay committed. They also help us when we need it. We have a lot of fun and learn many things from doing the activities.",
+      opts: ["at", "of", "for", "on"], ans: 0, cat: "Đọc hiểu – ngữ pháp",
+      tr: "Những bạn GIỎI TIẾNG ANH có thể kèm học sinh tiểu học.",
+      ex: "Cụm cố định: be good AT + môn/kỹ năng = giỏi về…",
+      tip: "be good at, be bad at, be interested in, be afraid of — học kèm giới từ như một cụm." },
+    { n: "Câu 15", q: "Our teachers often ________ us to stay committed.", passage: "My school has a number of volunteer activities every summer. The activities include donating books to village children, (11) _______ kids in the neighbourhood, teaching English to primary students, reading books or cooking food for the needy. Our school stated this programme five years ago. Every student can join one (12) _______ two activities. In the beginning, we thought about why we should join in these activities. We then thought about what activities we wanted (13) _______. Those who like reading could choose to collect and donate books. Those who are good (14)______ English could tutor primary students. Finally, we signed up for the activities we chose. Our teachers often (15) _______ us to stay committed. They also help us when we need it. We have a lot of fun and learn many things from doing the activities.",
+      opts: ["said", "encourage", "enjoy", "ask"], ans: 1, cat: "Đọc hiểu – từ vựng",
+      tr: "Các thầy cô thường ĐỘNG VIÊN chúng tôi giữ vững tinh thần trách nhiệm.",
+      ex: "Cấu trúc “encourage sb to V” = động viên ai làm gì, hợp nghĩa: thầy cô động viên học sinh kiên trì. “Said” không đi với “sb to V”.",
+      tip: "encourage + O + to V: động viên. Câu sau “They also help us” củng cố nghĩa tích cực của thầy cô." },
+    { n: "Câu 16", q: "What is the passage mainly about?", passage: "My hobby is cycling for pleasure, doing it in London can be a shock. There are not enough lanes especially for bikes, and making your way through the traffic can be very risky. But if you have great passion, cycling in London can be exciting, and it is an inexpensive way of keeping fit if you live there. Some cyclists don't mind spending money on expensive bikes. However, if you just want a basic bike that is only for occasional use, there are many cheap choices. Several markets have cheap bikes on sale which may not be impressive to look at but should be satisfactory. You should buy a cycling helmet if you want to cycle in London. Wearing a cycling helmet is not compulsory in Britain, but it is a good idea to wear one for protection.",
+      opts: ["Cycling helmets", "Cheap bicycles", "Bicycle markets", "Cycling in London"], ans: 3, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Bài đọc chủ yếu nói về điều gì? — Đi xe đạp ở London.",
+      opts_tr: ["Mũ bảo hiểm xe đạp", "Xe đạp giá rẻ", "Chợ bán xe đạp", "Đi xe đạp ở London"],
+      ex: "Mũ, xe rẻ, chợ xe chỉ là các chi tiết nhỏ trong bài. Ý chính xuyên suốt là trải nghiệm đi xe đạp ở London.",
+      tip: "Câu hỏi “mainly about”: loại trừ các đáp án chỉ là chi tiết nhỏ, chọn ý được nhắc trong suốt bài." },
+    { n: "Câu 17", q: "According to the passage, cycling in London is ________.", passage: "My hobby is cycling for pleasure, doing it in London can be a shock. There are not enough lanes especially for bikes, and making your way through the traffic can be very risky. But if you have great passion, cycling in London can be exciting, and it is an inexpensive way of keeping fit if you live there. Some cyclists don't mind spending money on expensive bikes. However, if you just want a basic bike that is only for occasional use, there are many cheap choices. Several markets have cheap bikes on sale which may not be impressive to look at but should be satisfactory. You should buy a cycling helmet if you want to cycle in London. Wearing a cycling helmet is not compulsory in Britain, but it is a good idea to wear one for protection.",
+      opts: ["easy", "difficult", "tiring", "boring"], ans: 1, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Theo bài đọc, việc đi xe đạp ở London là KHÓ.",
+      opts_tr: ["dễ", "khó", "mệt mỏi", "nhàm chán"],
+      ex: "Bài nói “there are not enough lanes” (thiếu làn đường) và “very risky” (rất nguy hiểm) → việc đi xe đạp ở London là khó.",
+      tip: "Câu hỏi chi tiết: tìm đúng câu trong bài chứa thông tin, không đoán theo suy nghĩ riêng." },
+    { n: "Câu 18", q: 'The word "pleasure" in line 1 is CLOSEST in meaning to: ________.', passage: "My hobby is cycling for pleasure, doing it in London can be a shock. There are not enough lanes especially for bikes, and making your way through the traffic can be very risky. But if you have great passion, cycling in London can be exciting, and it is an inexpensive way of keeping fit if you live there. Some cyclists don't mind spending money on expensive bikes. However, if you just want a basic bike that is only for occasional use, there are many cheap choices. Several markets have cheap bikes on sale which may not be impressive to look at but should be satisfactory. You should buy a cycling helmet if you want to cycle in London. Wearing a cycling helmet is not compulsory in Britain, but it is a good idea to wear one for protection.",
+      opts: ["happiness", "sadness", "tiredness", "danger"], ans: 0, cat: "Đọc hiểu – từ vựng",
+      tr: 'Từ "pleasure" (niềm vui thích) GẦN NGHĨA nhất với: happiness (hạnh phúc).',
+      opts_tr: ["niềm vui/hạnh phúc", "nỗi buồn", "sự mệt mỏi", "nguy hiểm"],
+      ex: "Pleasure = cảm giác vui thích, hài lòng → gần nghĩa với happiness. Ba từ còn lại đều nghĩa tiêu cực.",
+      tip: "Câu hỏi CLOSEST (gần nghĩa): chọn từ cùng hướng tích cực/tiêu cực với từ gốc." },
+    { n: "Câu 19", q: 'The word "cheap" in the passage is OPPOSITE in meaning to: ________.', passage: "My hobby is cycling for pleasure, doing it in London can be a shock. There are not enough lanes especially for bikes, and making your way through the traffic can be very risky. But if you have great passion, cycling in London can be exciting, and it is an inexpensive way of keeping fit if you live there. Some cyclists don't mind spending money on expensive bikes. However, if you just want a basic bike that is only for occasional use, there are many cheap choices. Several markets have cheap bikes on sale which may not be impressive to look at but should be satisfactory. You should buy a cycling helmet if you want to cycle in London. Wearing a cycling helmet is not compulsory in Britain, but it is a good idea to wear one for protection.",
+      opts: ["low-cost", "low-price", "reasonable", "expensive"], ans: 3, cat: "Đọc hiểu – từ vựng",
+      tr: 'Từ "cheap" (rẻ) TRÁI NGHĨA với: expensive (đắt).',
+      opts_tr: ["giá thấp", "giá thấp", "hợp lý", "đắt"],
+      ex: "Cheap = rẻ → trái nghĩa là expensive = đắt. Low-cost, low-price là đồng nghĩa; reasonable có nghĩa hợp lý.",
+      tip: "OPPOSITE = trái nghĩa. Bẫy thường gặp: chọn nhầm từ đồng nghĩa (low-cost) — luôn hỏi mình “ngược lại là gì?”." },
+    { n: "Câu 20", q: "Which of the following is NOT TRUE, according to the passage?", passage: "My hobby is cycling for pleasure, doing it in London can be a shock. There are not enough lanes especially for bikes, and making your way through the traffic can be very risky. But if you have great passion, cycling in London can be exciting, and it is an inexpensive way of keeping fit if you live there. Some cyclists don't mind spending money on expensive bikes. However, if you just want a basic bike that is only for occasional use, there are many cheap choices. Several markets have cheap bikes on sale which may not be impressive to look at but should be satisfactory. You should buy a cycling helmet if you want to cycle in London. Wearing a cycling helmet is not compulsory in Britain, but it is a good idea to wear one for protection.",
+      opts: ["It is compulsory to wear a helmet when cycling in Britain.", "Some bikes in London are cheap.", "There are not many lanes especially for bikes.", "Some cyclists don't mind spending a lot of money on expensive bikes."], ans: 0, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Câu nào SAU theo bài đọc? — “Bắt buộc phải đội mũ bảo hiểm khi đi xe đạp ở Anh.”",
+      ex: "Bài viết khẳng định ngược lại: “Wearing a cycling helmet is NOT compulsory in Britain” — đội mũ KHÔNG bắt buộc, chỉ là nên làm. Ba câu còn lại đều đúng với bài.",
+      tip: "Câu hỏi NOT TRUE/EXCEPT: đánh dấu √ vào 3 câu tìm thấy trong bài, câu còn lại chính là đáp án." },
+    { n: "Câu 21", q: "Stamp collecting is an interesting hobby because ________.", passage: "Stamp collecting is an interesting hobby. You can learn many things, such as the geography of a country from stamps. Postal stamps are a source of interesting facts and important dates about every country in the world. It makes stamp collecting become very popular. As you look at the pages of a stamp album, you can learn interesting details of foreign customs, arts, literature, history and culture. Their colours can make you feel relaxed and happy. Collecting stamps can become a business. If you are lucky in finding a special stamp, it will bring you some money besides knowledge and pleasure.",
+      opts: ["you can learn many things such as the geography of a country from stamps", "stamps give you interesting facts and important dates about a country", "it is very important to collect stamps", "A and B are correct"], ans: 3, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Sưu tầm tem là sở thích thú vị VÌ: cả A (học được nhiều điều như địa lý đất nước từ tem) và B (tem cho bạn sự kiện thú vị và ngày quan trọng của một quốc gia) đều đúng.",
+      ex: "Hai câu đầu của bài nêu cả hai lý do: học địa lý từ tem và tem là nguồn sự kiện, ngày tháng thú vị → chọn D gộp A và B.",
+      tip: "Khi có đáp án dạng “A and B are correct”, kiểm tra cả A và B có trong bài không rồi mới chọn." },
+    { n: "Câu 22", q: "All of the following are true EXCEPT ________.", passage: "Stamp collecting is an interesting hobby. You can learn many things, such as the geography of a country from stamps. Postal stamps are a source of interesting facts and important dates about every country in the world. It makes stamp collecting become very popular. As you look at the pages of a stamp album, you can learn interesting details of foreign customs, arts, literature, history and culture. Their colours can make you feel relaxed and happy. Collecting stamps can become a business. If you are lucky in finding a special stamp, it will bring you some money besides knowledge and pleasure.",
+      opts: ["stamps can make you relaxed and happy", "stamps can make you know more", "stamp collecting can make you famous", "you can earn money from your collection if you are lucky"], ans: 2, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Tất cả các ý sau đúng TRỪ: sưu tầm tem có thể làm bạn nổi tiếng.",
+      ex: "Bài không hề nhắc đến việc nổi tiếng (famous). Ba ý còn lại đều có trong bài: tem giúp thư giãn, vui; học thêm nhiều điều; có thể kiếm tiền nếu may mắn.",
+      tip: "EXCEPT: gạch chân thông tin có thật trong bài cho từng đáp án — đáp án không có trong bài là lựa chọn đúng." },
+    { n: "Câu 23", q: "According to the passage, it is true to say that ________.", passage: "Stamp collecting is an interesting hobby. You can learn many things, such as the geography of a country from stamps. Postal stamps are a source of interesting facts and important dates about every country in the world. It makes stamp collecting become very popular. As you look at the pages of a stamp album, you can learn interesting details of foreign customs, arts, literature, history and culture. Their colours can make you feel relaxed and happy. Collecting stamps can become a business. If you are lucky in finding a special stamp, it will bring you some money besides knowledge and pleasure.",
+      opts: ["stamp collecting helps you become rich and famous", "stamp collecting is a very popular hobby", "stamp collectors can earn a lot of money from stamp collecting", "stamp collecting is a hobby that costs you a lot of money"], ans: 1, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Theo bài đọc, nhận định đúng là: sưu tầm tem là một sở thích rất phổ biến.",
+      ex: "Bài viết khẳng định “It makes stamp collecting become very popular”. Còn lại: bài chỉ nói “some money” (một chút tiền) nếu may mắn, không phải giàu có hay tốn nhiều tiền.",
+      tip: "Bẫy “a lot of/much/rich”: chú ý các từ chỉ số lượng trong bài — bài chỉ nói “some money”." },
+    { n: "Câu 24", q: 'The word "business" in the last paragraph is closest in meaning to ________.', passage: "Stamp collecting is an interesting hobby. You can learn many things, such as the geography of a country from stamps. Postal stamps are a source of interesting facts and important dates about every country in the world. It makes stamp collecting become very popular. As you look at the pages of a stamp album, you can learn interesting details of foreign customs, arts, literature, history and culture. Their colours can make you feel relaxed and happy. Collecting stamps can become a business. If you are lucky in finding a special stamp, it will bring you some money besides knowledge and pleasure.",
+      opts: ["the activity of collecting stamps", "the activity of selling stamps from other countries", "the activity of buying stamps from other countries", "the activity of buying or selling something"], ans: 3, cat: "Đọc hiểu – từ vựng",
+      tr: 'Từ "business" trong đoạn cuối gần nghĩa với: hoạt động MUA HOẶC BÁN một thứ gì đó.',
+      ex: "Business = hoạt động thương mại, mua bán. Câu sau nói “it will bring you some money” (kiếm được tiền) → liên quan mua bán, không chỉ sưu tầm.",
+      tip: "Với câu hỏi nghĩa của từ, đọc câu NGAY SAU nó — thường có manh mối giải nghĩa từ đó." },
+    { n: "Câu 25", q: "Which is the best title for this passage?", passage: "Stamp collecting is an interesting hobby. You can learn many things, such as the geography of a country from stamps. Postal stamps are a source of interesting facts and important dates about every country in the world. It makes stamp collecting become very popular. As you look at the pages of a stamp album, you can learn interesting details of foreign customs, arts, literature, history and culture. Their colours can make you feel relaxed and happy. Collecting stamps can become a business. If you are lucky in finding a special stamp, it will bring you some money besides knowledge and pleasure.",
+      opts: ["Hobbies are good friends", "Collecting stamps is good", "Let's collect stamps", "Benefits of a hobby"], ans: 3, cat: "Đọc hiểu – đọc hiểu",
+      tr: "Tiêu đề hay nhất cho bài đọc là: Những lợi ích của một sở thích.",
+      opts_tr: ["Sở thích là người bạn tốt", "Sưu tầm tem rất tốt", "Hãy sưu tầm tem", "Lợi ích của một sở thích"],
+      ex: "Toàn bài liệt kê các lợi ích của việc sưu tầm tem (một sở thích): học hỏi, thư giãn, kiếm tiền. “Benefits of a hobby” bao quát nhất; “Let's collect stamps” chỉ là lời kêu gọi.",
+      tip: "Tiêu đề hay nhất phải bao quát toàn bài, không quá hẹp (chỉ tem) hay quá rộng." }
+  ]},
+  { name: "Viết", icon: "✍️", color: "var(--violet)", bg: "var(--violet-soft)", questions: [
+    { n: "Câu 1", q: "Sắp xếp các câu sau thành đoạn hội thoại có nghĩa:\na. Jane: Are you coming to the party at Sarah's house tonight?\nb. Sam: Yes, I wouldn't miss it! I've heard it's going to be a lot of fun.\nc. Jane: I'll see you there at around 7 pm.",
+      opts: ["a - c - b", "b - c - a", "a - b - c", "c - b - a"], ans: 2, cat: "Viết – sắp xếp hội thoại",
+      tr: "Jane: Tối nay bạn đến tiệc ở nhà Sarah chứ? → Sam: Có, mình không bỏ lỡ đâu! Nghe nói sẽ vui lắm. → Jane: Thấy bạn ở đó khoảng 7 giờ tối nhé.",
+      ex: "Câu a là lời mời (câu hỏi) phải mở đầu → b là câu trả lời “Yes” → c là câu kết “I'll see you there”. Trình tự: a - b - c.",
+      tip: "Sắp xếp hội thoại: tìm câu mở đầu (lời chào/câu hỏi), rồi ghép cặp hỏi–đáp theo mạch: mời → trả lời → hẹn gặp." },
+    { n: "Câu 2", q: "Sắp xếp các câu sau thành đoạn hội thoại có nghĩa:\na. Liam: I'm crazy about rock. Do you play any instruments?\nb. Mia: I love pop! How about you?\nc. Liam: Hey, Mia! What's your favorite type of music?\nd. Mia: Yes, I'm learning the guitar. It's fun!",
+      opts: ["c - b - d - a", "c - b - a - d", "a - d - c - b", "b - a - c - d"], ans: 1, cat: "Viết – sắp xếp hội thoại",
+      tr: "Liam: Chào Mia! Nhạc nào bạn thích nhất? → Mia: Mình thích pop! Còn bạn? → Liam: Mình mê nhạc rock. Bạn chơi nhạc cụ nào không? → Mia: Có, mình đang học guitar. Vui lắm!",
+      ex: "c mở đầu bằng lời chào và câu hỏi về nhạc → b trả lời và hỏi ngược lại → a trả lời về rock rồi hỏi tiếp về nhạc cụ → d trả lời. Trình tự: c - b - a - d.",
+      tip: "Theo chuỗi hỏi–đáp: mỗi câu trả lời phải khớp câu hỏi ngay trước nó (“How about you?” báo hiệu đổi lượt)." },
+    { n: "Câu 3", q: "Sắp xếp các câu sau thành đoạn hội thoại có nghĩa:\na. Lucy: Could you give me some suggestions on how to keep fit?\nb. Nam: You should eat less rice, fresh fruits and vegetables.\nc. Lucy: What are the best foods to eat?\nd. Nam: Well, firstly you need to do morning exercise everyday and eat the right foods.",
+      opts: ["a - b - c - d", "b - a - d - c", "b - a - c - d", "a - d - c - b"], ans: 3, cat: "Viết – sắp xếp hội thoại",
+      tr: "Lucy: Bạn gợi ý giúp mình cách giữ dáng nhé? → Nam: Trước tiên bạn cần tập thể dục buổi sáng và ăn đúng loại thức ăn. → Lucy: Thức ăn nào là tốt nhất? → Nam: Bạn nên ăn ít cơm, nhiều trái cây và rau quả tươi.",
+      ex: "a là câu hỏi mở đầu → d trả lời tổng quát (firstly…) → c hỏi cụ thể về thức ăn → b trả lời chi tiết. Trình tự: a - d - c - b.",
+      tip: "Từ nối là chìa khóa: “firstly” theo sau câu hỏi tổng quát; câu trả lời chi tiết đến sau." },
+    { n: "Câu 4", q: "Sắp xếp các câu sau thành đoạn hội thoại có nghĩa:\na. Lisa: That sounds fun! What do you usually do in the club?\nb. Nam: We draw, paint, and sometimes make crafts. It's a great way to relax and be creative.\nc. Nam: Hi, Lisa! Would you like to join our Art Club this Friday after school?",
+      opts: ["a - c - b", "a - b - c", "c - b - a", "c - a - b"], ans: 3, cat: "Viết – sắp xếp hội thoại",
+      tr: "Nam: Chào Lisa! Cuối tuần này bạn muốn gia nhập Câu lạc bộ Mỹ thuật của chúng mình không? → Lisa: Nghe vui đấy! Thường thì các bạn làm gì trong câu lạc bộ? → Nam: Chúng mình vẽ, tô màu, đôi khi làm đồ thủ công. Cách thư giãn và sáng tạo rất tuyệt.",
+      ex: "c là lời chào + lời mời mở đầu → a phản hồi “That sounds fun!” và hỏi tiếp → b trả lời về hoạt động. Trình tự: c - a - b.",
+      tip: "“That sounds fun!” luôn là PHẢN HỒI — không thể đứng đầu. Tìm câu có lời chào (Hi/Hello) để mở đầu." },
+    { n: "Câu 5", q: "Sắp xếp các câu sau thành đoạn hội thoại có nghĩa:\na. Sarah: Hmm, I'm in the mood for pizza! Let's go to that new pizzeria.\nb. Sarah: That sounds good! What do you want to eat?\nc. Lucy: Sarah! How about we go out for dinner tonight?\nd. Lucy: How about pizza or maybe some pasta?",
+      opts: ["b - a - d - c", "c - b - d - a", "a - b - c - d", "c - b - a - d"], ans: 1, cat: "Viết – sắp xếp hội thoại",
+      tr: "Lucy: Sarah! Tối nay mình đi ăn ngoài nhé? → Sarah: Hay đấy! Bạn muốn ăn gì? → Lucy: Pizza thì sao, hoặc mì Ý? → Sarah: Ừ, mình đang thèm pizza! Đi đến tiệm pizza mới ấy.",
+      ex: "c gợi ý đi ăn → b đồng ý và hỏi món → d đề xuất món → a chốt chọn pizza. Trình tự: c - b - d - a.",
+      tip: "Chú ý người nói: c và d là của Lucy, a và b là của Sarah — câu của mỗi người phải xen kẽ hợp lý, không đứng cạnh nhau trừ khi có lý do." },
+    { n: "Câu 1", q: "Viết lại câu sao cho nghĩa không đổi: “I have a bookshelf in my bedroom.” → There is …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "There is a bookshelf in my bedroom.",
+      tr: "Tôi có một giá sách trong phòng ngủ. → Có một giá sách trong phòng ngủ.",
+      tip: "Cấu trúc There is/are + N + (trạng ngữ nơi chốn): dùng khi nói sự tồn tại của sự vật. There is + số ít, There are + số nhiều." },
+    { n: "Câu 2", q: "Viết lại câu sao cho nghĩa không đổi: “She is interested in watching television.” → She likes …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "She likes watching television.",
+      tr: "Cô ấy thích xem tivi. → Cô ấy thích xem tivi.",
+      tip: "be interested in + V-ing = like + V-ing = enjoy + V-ing (thích làm gì)." },
+    { n: "Câu 3", q: "Viết lại câu sao cho nghĩa không đổi: “My hobby is watching TV.” → I enjoy …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "I enjoy watching TV.",
+      tr: "Sở thích của tôi là xem tivi. → Tôi thích xem tivi.",
+      tip: "My hobby is + V-ing = I enjoy + V-ing. Nhớ: enjoy luôn đi với V-ing." },
+    { n: "Câu 4", q: "Viết lại câu sao cho nghĩa không đổi: “Nam's favorite sport is football.” → Nam enjoys …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "Nam enjoys playing football.",
+      tr: "Môn thể thao yêu thích của Nam là bóng đá. → Nam thích chơi bóng đá.",
+      tip: "Nhớ thêm hoạt động phù hợp: favorite sport is football → enjoys PLAYING football." },
+    { n: "Câu 5", q: "Viết lại câu sao cho nghĩa không đổi: “Nobody wanted to go, so they delayed the trip.” → They delayed …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "They delayed the trip because nobody wanted to go.",
+      tr: "Không ai muốn đi, vì vậy họ trì hoãn chuyến đi. → Họ trì hoãn chuyến đi vì không ai muốn đi.",
+      tip: "Chuyển “so + mệnh đề” thành “because + mệnh đề” — giữ nguyên nghĩa nhân quả, đổi vị trí vế." },
+    { n: "Câu 6", q: "Viết lại câu sao cho nghĩa không đổi: “The black car is cheaper than the red one.” → The red car is …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "The red car is more expensive than the black one.",
+      tr: "Xe đen rẻ hơn xe đỏ. → Xe đỏ đắt hơn xe đen.",
+      tip: "So sánh hơn đảo chiều: cheaper (rẻ hơn) ⟷ more expensive (đắt hơn). Đừng quên “more” với tính từ dài." },
+    { n: "Câu 7", q: "Viết lại câu sao cho nghĩa không đổi: “My father usually stayed up late to watch soccer matches last year, but now he doesn't.” → My father used …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "My father used to stay up late to watch soccer matches.",
+      tr: "Năm ngoái bố tôi thường thức khuya xem bóng đá, nhưng bây giờ thì không. → Bố tôi đã từng thức khuya xem bóng đá.",
+      tip: "used to + V nguyên mẫu: thói quen trong quá khứ mà giờ không còn. Sau “used to” LUÔN là động từ nguyên mẫu." },
+    { n: "Câu 8", q: "Viết lại câu sao cho nghĩa không đổi: “My parents go to work from Monday to Friday.” → My parents …", type: "open",
+      cat: "Viết – viết lại câu",
+      sample: "My parents work from Monday to Friday.",
+      tr: "Bố mẹ tôi đi làm từ thứ Hai đến thứ Sáu. → Bố mẹ tôi làm việc từ thứ Hai đến thứ Sáu.",
+      tip: "“go to work” = đi làm → có thể viết lại là “work from Monday to Friday” hoặc “go to work on weekdays”." },
+    { n: "Câu 1", q: "Hoàn thành câu, bắt đầu bằng từ đã cho: “Ms Lan has a son. His name is Duy.” → Duy is …", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "Duy is Ms Lan's son.",
+      tr: "Cô Lan có một con trai. Tên cháu là Duy. → Duy là con trai của cô Lan.",
+      tip: "Sở hữu cách: tên người + 's + danh từ (Ms Lan's son). Dùng cho người, không dùng “of”." },
+    { n: "Câu 2", q: "Hoàn thành câu, bắt đầu bằng từ đã cho: “You study harder. You will pass the exam.” → If …", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "If you study harder, you will pass the exam.",
+      tr: "Bạn học chăm hơn. Bạn sẽ đỗ kỳ thi. → Nếu bạn học chăm hơn, bạn sẽ đỗ kỳ thi.",
+      tip: "Câu điều kiện loại 1: If + S + V(hiện tại đơn), S + will + V. Diễn tả khả năng có thể xảy ra ở tương lai." },
+    { n: "Câu 3", q: "Hoàn thành câu, bắt đầu bằng từ đã cho: “Ha is 1.75 meters tall. Nam is 1.65 meters tall.” → Ha is …", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "Ha is taller than Nam. (Hoặc: Ha is 10 centimeters taller than Nam.)",
+      tr: "Ha cao 1,75 m. Nam cao 1,65 m. → Ha cao hơn Nam 10 cm.",
+      tip: "So sánh hơn với tính từ ngắn: adj + ER + than (taller than). Có thể nêu chênh lệch: 10 cm taller." },
+    { n: "Câu 4", q: "Hoàn thành câu, bắt đầu bằng từ đã cho: “I enjoy the history of internet, so I read a lot of books about it.” → Because …", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "Because I enjoy the history of the Internet, I read a lot of books about it.",
+      tr: "Tôi thích lịch sử Internet, nên tôi đọc nhiều sách về nó. → Vì tôi thích lịch sử Internet nên tôi đọc nhiều sách về nó.",
+      tip: "so (vì vậy) ⟷ because (vì): hai từ nối đổi vị trí vế, nghĩa nhân quả giữ nguyên." },
+    { n: "Câu 5", q: "Dùng từ gợi ý viết thành câu hoàn chỉnh: Collecting / used books / one / teacher's hobbies.", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "Collecting used books is one of the teacher's hobbies.",
+      tr: "Sưu tầm sách cũ là một trong những sở thích của thầy/cô giáo.",
+      tip: "Cấu trúc: V-ing + is + one of + the + danh từ sở hữu + hobbies. “one of + số nhiều” nhưng động từ số ít (is)." },
+    { n: "Câu 6", q: "Dùng từ gợi ý viết thành câu hoàn chỉnh: Listening / the radio / watching television / things I like / doing.", type: "open",
+      cat: "Viết – hoàn thành câu",
+      sample: "Listening to the radio and watching television are things I like doing.",
+      tr: "Nghe đài và xem tivi là những việc tôi thích làm.",
+      tip: "Danh động từ (V-ing) có thể làm chủ ngữ; khi chủ ngữ gồm nhiều V-ing nối bằng and → động từ “are”." },
+    { n: "Câu 1", q: "Viết một đoạn văn (khoảng 60–70 từ) về thói quen hằng ngày giúp bạn giữ gìn sức khỏe.", type: "open",
+      cat: "Viết – đoạn văn",
+      tr: "Gợi ý nội dung: • Bạn ăn uống gì mỗi ngày • Bạn chơi môn thể thao/thể dục gì • Những việc đó giúp bạn khỏe mạnh, dẻo dai thế nào",
+      sample: "Every day, I try to eat healthy food. I have breakfast with eggs, bread and milk. I eat a lot of vegetables and fruit, and I drink enough water. I never eat too much fast food or drink soft drinks. After school, I often play badminton with my friends or ride my bike around the neighborhood. In the evening, I sometimes do morning exercises with my dad. These habits help me keep fit and strong. I feel happy and full of energy, so I can study well at school.",
+      tip: "Dàn ý 4 bước: (1) câu mở đầu về thói quen – (2) ăn uống – (3) vận động – (4) lợi ích + cảm xúc. Dùng hiện tại đơn và từ nối first, then, after school, finally." },
+    { n: "Câu 2", q: "Viết một đoạn văn ngắn (khoảng 80–100 từ) về sở thích của bạn.", type: "open",
+      cat: "Viết – đoạn văn",
+      tr: "Gợi ý nội dung: • Sở thích của bạn là gì? • Bạn bắt đầu từ khi nào? • Bạn cần những gì để theo đuổi sở thích đó? • Sở thích mang lại lợi ích gì?",
+      sample: "My favorite hobby is reading books. I started this hobby when I was in Grade 3. My mother gave me a storybook on my birthday, and I fell in love with reading from that day. To enjoy my hobby, I need interesting books and a quiet corner in my house. I often read before going to bed. Reading brings me many benefits: I learn new words, know more about the world and feel relaxed after a long day at school. It also helps me write better. In the future, I hope to have my own bookshelf with hundreds of books.",
+      tip: "Dàn ý 4 bước theo gợi ý: sở thích là gì → bắt đầu khi nào → cần gì → lợi ích. Kết bài bằng mong ước hoặc cảm xúc để đoạn văn thấm." }
+  ]}
+);
+
+/* ================== LOGIC ỨNG DỤNG ================== */
+let DATA = DEFAULT_DATA;
+let state = { mode: "auto", answers: {}, section: "all", questions: [] };
+
+const $ = (id) => document.getElementById(id);
+const LETTERS = ["A", "B", "C", "D"];
+
+function saveState(){ try{ localStorage.setItem("l7quiz", JSON.stringify(state)); }catch(e){} }
+function loadState(){ try{ return JSON.parse(localStorage.getItem("l7quiz")||"null"); }catch(e){ return null; } }
+
+function collectQuestions(){
+  state.questions = [];
+  DATA.sections.forEach((sec, si) => {
+    (sec.questions||[]).forEach((q) => {
+      q._section = sec.name; q._icon = sec.icon || "❓";
+      q._color = sec.color || "var(--teal)"; q._bg = sec.bg || "var(--teal-soft)";
+      q._id = si + "-" + state.questions.length;
+      state.questions.push(q);
+    });
+  });
+}
+
+function toast(msg, err){
+  const t = $("toast");
+  t.textContent = msg; t.classList.toggle("err", !!err); t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 3200);
+}
+
+/* ---------- RENDER ---------- */
+function render(){
+  collectQuestions();
+  const area = $("quizArea"); area.innerHTML = "";
+  let shown = 0;
+  DATA.sections.forEach((sec, si) => {
+    const qs = (sec.questions||[]).filter(q => state.section === "all" || state.section === sec.name);
+    if(!qs.length) return;
+    shown += qs.length;
+    const head = document.createElement("div");
+    head.className = "section-head";
+    head.innerHTML = `<div class="ico" style="background:${sec.bg||"var(--teal-soft)"}">${sec.icon||"❓"}</div>
+      <h2>${esc(sec.name)}</h2><span class="cnt">${qs.length} câu</span>`;
+    area.appendChild(head);
+
+    let lastPassage = null, partNo = 0;
+    qs.forEach((q) => {
+      if(q.passage && q.passage !== lastPassage){
+        const ps = document.createElement("div");
+        ps.className = "passage"; ps.innerHTML = esc(q.passage);
+        area.appendChild(ps);
+      }
+      lastPassage = q.passage || lastPassage;
+      area.appendChild(renderQuestion(q));
+    });
+  });
+  $("statTotal").textContent = state.questions.length;
+  $("statSections").textContent = DATA.sections.length;
+  updateProgress();
+}
+
+function renderQuestion(q){
+  const saved = state.answers[q._id];
+  const card = document.createElement("div");
+  card.className = "q-card";
+  card.id = "qc-" + q._id;
+
+  const top = document.createElement("div");
+  top.className = "q-top";
+  top.innerHTML = `<span class="q-num">${esc(q.n||"")}</span>
+    <span class="q-badge" style="background:${q._bg};color:${q._color}">${esc(q.cat||q._section)}</span>
+    <span class="q-text">${esc(q.q).replace(/\n/g,"<br>")}</span>`;
+  card.appendChild(top);
+
+  if(q.type === "open"){
+    card.appendChild(renderOpen(q, saved));
+    return card;
+  }
+
+  const opts = document.createElement("div");
+  opts.className = "opts";
+  q.opts.forEach((opt, i) => {
+    const b = document.createElement("button");
+    b.className = "opt";
+    b.innerHTML = `<span class="k">${LETTERS[i]}</span><span>${esc(opt)}</span>`;
+    if(saved){
+      b.disabled = true;
+      if(i === q.ans) b.classList.add("right");
+      if(i === saved && saved !== q.ans) b.classList.add("wrongpick");
+      if(i === saved) b.classList.add("picked");
+    } else {
+      b.onclick = () => pick(q, i);
+    }
+    opts.appendChild(b);
+  });
+  card.appendChild(opts);
+
+  if(state.mode === "manual" && saved === undefined && !state.answers[q._id + "_checked"]){
+    const act = document.createElement("div");
+    act.className = "q-actions";
+    const chk = document.createElement("button");
+    chk.className = "btn btn-teal btn-sm";
+    chk.textContent = "✅ Kiểm tra đáp án";
+    chk.onclick = () => {
+      if(state.answers[q._id] === undefined){ toast("Bạn chưa chọn đáp án cho câu này nhé!", true); return; }
+      state.answers[q._id + "_checked"] = true; saveState();
+      refreshCard(q); updateProgress();
+    };
+    act.appendChild(chk);
+    card.appendChild(act);
+  }
+
+  if(saved !== undefined && (state.mode === "auto" || state.answers[q._id + "_checked"])){
+    card.classList.add(saved === q.ans ? "correct" : "wrong");
+    card.appendChild(buildFeedback(q, saved, true));
+  }
+  return card;
+}
+
+function renderOpen(q, saved){
+  const box = document.createElement("div");
+  box.className = "open-area";
+  const ta = document.createElement("textarea");
+  ta.placeholder = "Gõ bài làm của bạn vào đây (không chấm điểm tự động)…";
+  if(saved && saved.text) ta.value = saved.text;
+  ta.oninput = () => { state.answers[q._id] = {text: ta.value, open: true}; saveState(); updateProgress(); };
+  box.appendChild(ta);
+  const act = document.createElement("div");
+  act.className = "q-actions";
+  const btn = document.createElement("button");
+  btn.className = "btn btn-ghost btn-sm";
+  btn.textContent = "💡 Xem đáp án mẫu";
+  btn.onclick = () => {
+    const s = box.querySelector(".sample");
+    const open = s.classList.toggle("open");
+    btn.textContent = open ? "🙈 Ẩn đáp án mẫu" : "💡 Xem đáp án mẫu";
+  };
+  act.appendChild(btn);
+  box.appendChild(act);
+  const s = document.createElement("div");
+  s.className = "sample";
+  s.innerHTML = `<div class="sample-inner"><span class="tag tag-tr">ĐÁP ÁN MẪU</span>
+    <p><b>${esc(q.sample||"")}</b></p>
+    ${q.tr ? `<p style="margin-top:6px"><i>${esc(q.tr)}</i></p>` : ""}
+    ${q.tip ? `<div class="fb-row"><span class="tag tag-tip">MẸO</span><p>${esc(q.tip)}</p></div>` : ""}</div>`;
+  box.appendChild(s);
+  return box;
+}
+
+function buildFeedback(q, chosen, showBanner){
+  const fb = document.createElement("div");
+  fb.className = "fb open";
+  const ok = chosen === q.ans;
+  const optsTr = q.opts_tr || [];
+  const rightOpt = q.opts[q.ans], chosenOpt = q.opts[chosen];
+  let banner = "";
+  if(showBanner){
+    if(ok) banner = "🎉 Chính xác! Làm tốt lắm";
+    else{
+      banner = "😅 Chưa đúng — đáp án đúng là " + LETTERS[q.ans] + ". " + esc(rightOpt);
+      if(optsTr[q.ans]) banner += " (" + esc(optsTr[q.ans]) + ")";
+    }
+  }
+  let rows = '<div class="fb-row"><span class="tag tag-cat">PHÂN LOẠI</span><p><b>' + esc(q.cat||q._section) + '</b> · phần ' + esc(q._section) + " " + q._icon + '</p></div>';
+  if(q.tr){
+    let trTxt = esc(q.tr);
+    if(chosenOpt && !ok){
+      trTxt += '<br><i>Lựa chọn của bạn (' + LETTERS[chosen] + '): ' + esc(chosenOpt);
+      if(optsTr[chosen]) trTxt += " – " + esc(optsTr[chosen]);
+      trTxt += '</i>';
+    }
+    rows += '<div class="fb-row"><span class="tag tag-tr">BẢN DỊCH</span><p>' + trTxt + '</p></div>';
+  }
+  if(q.ex) rows += '<div class="fb-row"><span class="tag tag-ex">GIẢI THÍCH</span><p>' + esc(q.ex) + '</p></div>';
+  if(q.tip) rows += '<div class="fb-row"><span class="tag tag-tip">MẸO LÀM BÀI</span><p>' + esc(q.tip) + '</p></div>';
+  fb.innerHTML = '<div class="fb-inner">'
+    + (showBanner ? '<div class="fb-banner ' + (ok?"ok":"no") + '">' + banner + '</div>' : "")
+    + rows + '</div>';
+  return fb;
+}
+
+/* ---------- INTERACTION ---------- */
+function pick(q, i){
+  if(state.answers[q._id] !== undefined) return;
+  state.answers[q._id] = i; saveState();
+  refreshCard(q); updateProgress();
+  if(state.mode === "auto"){
+    const ok = i === q.ans;
+    toast(ok ? "🎉 Chính xác!" : "😅 Chưa đúng — xem giải thích bên dưới nhé");
+    cardIntoView(q);
+  }
+}
+function refreshCard(q){
+  const old = $("qc-" + q._id);
+  if(!old) return;
+  const nu = renderQuestion(q);
+  old.replaceWith(nu);
+}
+function cardIntoView(q){
+  const c = $("qc-" + q._id);
+  if(c) c.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+function updateProgress(){
+  const mcq = state.questions.filter(q => q.type !== "open");
+  const open = state.questions.filter(q => q.type === "open");
+  const answered = mcq.filter(q => state.answers[q._id] !== undefined).length;
+  const right = mcq.filter(q => state.answers[q._id] === q.ans).length;
+  const total = mcq.length + open.length;
+  const done = answered + open.filter(q => state.answers[q._id] && state.answers[q._id].text).length;
+  $("bar").style.width = (total ? Math.round(done/total*100) : 0) + "%";
+  $("scoreChip").textContent = `${right}/${mcq.length} câu đúng · đã làm ${done}/${total}`;
+}
+
+function setMode(m){
+  state.mode = m; saveState();
+  $("modeAuto").classList.toggle("on", m === "auto");
+  $("modeManual").classList.toggle("on", m === "manual");
+  render();
+  toast(m === "auto" ? "⚡ Chế độ chấm ngay khi chọn" : "🧐 Chế độ tự kiểm tra — chọn hết rồi bấm Kiểm tra đáp án");
+}
+
+function resetAll(){
+  if(!confirm("Xóa hết bài làm và bắt đầu lại?")) return;
+  state.answers = {}; saveState();
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+  toast("🔄 Đã làm lại từ đầu. Chúc bạn ôn tập hiệu quả!");
+}
+
+function openResult(){
+  const mcq = state.questions.filter(q => q.type !== "open");
+  const answered = mcq.filter(q => state.answers[q._id] !== undefined);
+  const right = answered.filter(q => state.answers[q._id] === q.ans).length;
+  const pct = mcq.length ? Math.round(right/mcq.length*100) : 0;
+  $("resEmoji").textContent = pct >= 90 ? "🏆" : pct >= 70 ? "🌟" : pct >= 50 ? "💪" : "📖";
+  $("resTitle").textContent = pct >= 90 ? "Xuất sắc!" : pct >= 70 ? "Tốt lắm!" : pct >= 50 ? "Khá ổn!" : "Cần cố gắng thêm!";
+  $("resSub").textContent = `Bạn đúng ${right}/${mcq.length} câu (${pct}%)${answered.length < mcq.length ? " · còn " + (mcq.length - answered.length) + " câu chưa làm" : ""}`;
+  const box = $("secScores"); box.innerHTML = "";
+  DATA.sections.forEach(sec => {
+    const qs = (sec.questions||[]).filter(q => q.type !== "open");
+    if(!qs.length) return;
+    const r = qs.filter(q => state.answers[q._id] === q.ans).length;
+    const p = Math.round(r/qs.length*100);
+    box.innerHTML += `<div class="sec-score"><span>${sec.icon} ${esc(sec.name)}</span>
+      <span class="mini-bar"><i style="width:${p}%"></i></span><b>${r}/${qs.length}</b></div>`;
+  });
+  $("resultModal").classList.add("show");
+}
+
+/* ---------- TEACHER: LOAD DATA ---------- */
+function applyData(obj, srcName){
+  try{
+    if(Array.isArray(obj)) obj = { sections: obj };
+    if(obj.sections && Array.isArray(obj.sections)){
+      obj.sections.forEach(sec => {
+        sec.questions = (sec.questions||[]).map(normQ);
+      });
+      DATA = { title: obj.title || "Bộ đề tùy chỉnh", school: obj.school || "", sections: obj.sections };
+      state.answers = {}; state.section = "all";
+      saveState(); buildChips(); render();
+      window.scrollTo({top:0, behavior:"smooth"});
+      toast("✅ Đã nạp bộ đề \"" + (srcName||"tùy chỉnh") + "\" – " + DATA.sections.length + " phần thi");
+    } else if(Array.isArray(obj.questions)){
+      applyData({sections:[{name: obj.title || "Bộ đề tùy chỉnh", questions: obj.questions}]}, srcName);
+    } else { throw new Error("Định dạng không nhận diện được"); }
+  }catch(e){ toast("❌ Lỗi dữ liệu: " + e.message, true); }
+}
+
+function normQ(q, i){
+  let opts = q.options || q.opts || [];
+  if(typeof opts === "string") opts = opts.split("|");
+  let ans = q.answer !== undefined ? q.answer : q.ans;
+  if(typeof ans === "string"){
+    const up = ans.trim().toUpperCase();
+    ans = "ABCD".indexOf(up) !== -1 ? "ABCD".indexOf(up) : parseInt(up)-1;
+    if(isNaN(ans)) ans = 0;
+  }
+  return {
+    n: q.n || ("Câu " + (i+1)), q: q.question || q.q || "", opts, ans: ans|0, cat: q.category || q.cat,
+    tr: q.translate || q.tr, ex: q.explain || q.ex, tip: q.tip, passage: q.passage,
+    opts_tr: q.options_translate || q.opts_tr || [], type: q.sample ? (q.type || "open") : (q.type || "mcq"),
+    sample: q.sample
+  };
+}
+
+function loadPasted(){
+  const txt = $("pasteBox").value.trim();
+  if(!txt){ toast("Hãy dán dữ liệu vào ô trước đã nhé!", true); return; }
+  if(txt[0] === "{" || txt[0] === "["){
+    try{ applyData(JSON.parse(txt), "dán trực tiếp"); return; }catch(e){ toast("❌ JSON không hợp lệ — kiểm tra lại dấu ngoặc, phẩy.", true); return; }
+  }
+  applyData(parseTxt(txt), "dán trực tiếp");
+}
+
+function parseTxt(txt){
+  const sections = [];
+  let curSec = null, curQ = null, lastTag = null;
+  const secNames = [];
+  txt.split(/\r?\n/).forEach(raw => {
+    const line = raw.trim();
+    if(!line) return;
+    if(/^(#|PHẦN|PHần|---)/i.test(line)){
+      const name = line.replace(/^(#|PHẦN|PHần|---+)\s*/,"").replace(/-+$/,"").trim() || ("Phần " + (sections.length+1));
+      if(name){ curSec = {name, questions:[]}; sections.push(curSec); curQ = null; }
+      return;
+    }
+    if(!curSec){ curSec = {name:"Bộ đề tùy chỉnh", questions:[]}; sections.push(curSec); }
+    if(/^(Câu|CÂU|Q\d|Question)\s*\d*\s*[:.]/i.test(line)){
+      curQ = {q: line.replace(/^(Câu|CÂU|Q\d+|Question\s*\d*)\s*\d*\s*[:.]\s*/i,""), opts:[]};
+      curSec.questions.push(curQ); lastTag = "q"; return;
+    }
+    if(/^\[Đoạn văn\s*[:：]/i.test(line)){
+      if(curQ) curQ.passage = line.replace(/^\[Đoạn văn\s*[:：]\s*/i,"").replace(/\]$/,"");
+      return;
+    }
+    const mOpt = line.match(/^[-*•]?\s*([A-Da-d])\s*[).:：]\s*(.+)$/);
+    if(mOpt && curQ){ curQ.opts.push(mOpt[2].trim()); lastTag = "opt"; return; }
+    const mTag = line.match(/^(Đáp án|ĐÁP ÁN|Dịch|DỊCH|Giải thích|GIẢI THÍCH|Mẹo|MẸO|Sample|Đáp án mẫu)\s*[:：]\s*(.*)$/);
+    if(mTag && curQ){
+      const tag = mTag[1].toLowerCase(), val = mTag[2].trim();
+      if(tag.startsWith("đáp án") && !tag.includes("mẫu")) curQ.answer = val;
+      else if(tag === "dịch") curQ.translate = val;
+      else if(tag.startsWith("giải")) curQ.explain = val;
+      else if(tag === "mẹo") curQ.tip = val;
+      else if(tag === "sample" || tag.includes("mẫu")) curQ.sample = val;
+      lastTag = "meta"; return;
+    }
+    if(curQ && lastTag && curQ.opts.length && /^[A-Da-d]\s*[).:：]/.test(line) === false){
+      const map = {q:"q", opt:"opts", meta:null};
+      if(lastTag === "q" && !curQ.opts.length) curQ.q += " " + line;
+      else if(lastTag === "opt") curQ.opts[curQ.opts.length-1] += " " + line;
+      else {
+        const lastKey = Object.keys(curQ).pop();
+        if(typeof curQ[lastKey] === "string") curQ[lastKey] += " " + line;
+      }
+    }
+  });
+  const sectionsClean = sections.filter(s => s.questions.length).map(s => ({name: s.name, questions: s.questions}));
+  if(!sectionsClean.length) throw new Error("Không tìm thấy câu hỏi nào (cần dòng bắt đầu bằng \"Câu 1:\")");
+  return {sections: sectionsClean};
+}
+
+function loadDefault(){
+  DATA = DEFAULT_DATA; state.answers = {}; state.section = "all";
+  saveState(); buildChips(); render();
+  window.scrollTo({top:0, behavior:"smooth"});
+  toast("↩️ Đã quay lại bộ đề mẫu từ đề cương của trường");
+}
+
+$("fileInput").addEventListener("change", (e) => {
+  const f = e.target.files[0]; if(!f) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    $("pasteBox").value = reader.result;
+    const text = reader.result.trim();
+    if(text[0] === "{" || text[0] === "["){
+      try{ applyData(JSON.parse(text), f.name); }catch(err){ toast("❌ File JSON không hợp lệ.", true); }
+    } else {
+      try{ applyData(parseTxt(text), f.name); }catch(err){ toast("❌ " + err.message, true); }
+    }
+  };
+  reader.readAsText(f, "UTF-8");
+  e.target.value = "";
+});
+
+/* ---------- SECTION CHIPS ---------- */
+function buildChips(){
+  const box = $("sectionChips"); box.innerHTML = "";
+  const mk = (name, label) => {
+    const c = document.createElement("button");
+    c.className = "chip" + (state.section === name ? " on" : "");
+    c.textContent = label;
+    c.onclick = () => { state.section = name; saveState(); buildChips(); render();
+      document.querySelector(".section-head")?.scrollIntoView({behavior:"smooth"}); };
+    box.appendChild(c);
+  };
+  mk("all", "🌐 Tất cả");
+  DATA.sections.forEach(s => mk(s.name, (s.icon||"❓") + " " + s.name));
+}
+
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* ---------- INIT ---------- */
+(function init(){
+  const saved = loadState();
+  if(saved && saved.questions){ state.mode = saved.mode || "auto"; state.answers = saved.answers || {}; }
+  buildChips(); render();
+})();
+</script>
+</body>
+</html>
